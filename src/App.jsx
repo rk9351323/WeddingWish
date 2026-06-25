@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
+const asset = (path) => `${import.meta.env.BASE_URL}images/${path}`
+
 /* ========== Intersection Observer Hook ========== */
 function useInView(options = {}) {
   const ref = useRef(null)
@@ -171,7 +173,7 @@ function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/images/wedding_decor.jpg"
+          src={asset('wedding_decor.jpg')}
           alt="Wedding decoration"
           className="w-full h-full object-cover"
         />
@@ -266,7 +268,7 @@ function WelcomeBanner() {
           <div className="relative inline-block">
             <div className="absolute -inset-3 rounded-full bg-gradient-to-br from-gold via-amber-400 to-maroon opacity-30 blur-lg animate-pulse-glow" />
             <img
-              src="/images/bride_silki.jpg"
+              src={asset('bride_silki.jpg')}
               alt="Silki Kumari - The Beautiful Bride"
               className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full object-cover object-top border-4 border-gold/60 shadow-xl"
             />
@@ -381,37 +383,37 @@ function GallerySection() {
 
   const photos = [
     {
-      src: '/images/bride_silki.jpg',
+      src: asset('bride_silki.jpg'),
       caption: 'The Beautiful Bride',
       rotation: '-rotate-2',
     },
     {
-      src: '/images/wedding_decor.jpg',
+      src: asset('wedding_decor.jpg'),
       caption: 'Wedding Celebrations',
       rotation: 'rotate-1',
     },
     {
-      src: '/images/haldi_ceremony.png',
+      src: asset('haldi_ceremony.png'),
       caption: 'Haldi Ceremony',
       rotation: '-rotate-1',
     },
     {
-      src: '/images/pooja_matkor.jpg',
+      src: asset('pooja_matkor.jpg'),
       caption: 'Pooja Matkor',
       rotation: 'rotate-2',
     },
     {
-      src: '/images/mehndi_hands.png',
+      src: asset('mehndi_hands.png'),
       caption: 'Mehndi Magic',
       rotation: 'rotate-1',
     },
     {
-      src: '/images/wedding_mandap.png',
+      src: asset('wedding_mandap.png'),
       caption: 'Sacred Mandap',
       rotation: '-rotate-2',
     },
     {
-      src: '/images/wedding_ceremony.png',
+      src: asset('wedding_ceremony.png'),
       caption: 'Wedding Rituals',
       rotation: 'rotate-1',
     },
@@ -486,7 +488,7 @@ function BlessingsFooter() {
       {/* Border image */}
       <div className="w-full h-16 sm:h-24 overflow-hidden opacity-30">
         <img
-          src="/images/wedding_border.png"
+          src={asset('wedding_border.png')}
           alt=""
           className="w-full h-full object-cover"
         />
